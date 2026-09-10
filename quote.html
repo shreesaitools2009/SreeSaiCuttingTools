@@ -1,48 +1,131 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Request a Quote | Sree Sai Cutting Tools</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Send RFQ / Drawing | Sree Sai Cutting Tools</title>
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
 <body>
+    <div class="topbar">
+        <div class="wrap"><span>Send your component drawing or current tool specification</span><span><a
+                    href="mailto:shreesaitools@gmail.com">shreesaitools@gmail.com</a></span></div>
+    </div>
     <header>
-        <div class="wrap nav"><a class="brand" href="index.html">SREE SAI CUTTING TOOLS<small>PRECISION CUTTING TOOLS •
-                    HYDERABAD</small></a>
-            <nav><a href="about.html">About Us</a><a href="products.html">Products</a><a
+        <div class="wrap nav"><a class="brand" href="index.html">SREE SAI CUTTING TOOLS PVT LTD<small>GEAR HOBS • SPLINE
+                    CUTTERS • SPECIAL TOOLS</small></a><button class="menuBtn">☰</button>
+            <nav><a href="about.html">About</a><a href="products.html">Products</a><a
                     href="capabilities.html">Capabilities</a><a href="quality.html">Quality</a><a
                     href="industries.html">Industries</a><a href="contact.html">Contact</a><a class="cta"
-                    href="quote.html">Request a Quote</a></nav>
+                    href="quote.html">Send RFQ / Drawing</a></nav>
         </div>
     </header>
     <section class="pagehero">
         <div class="wrap">
             <div class="eyebrow">REQUEST A QUOTE</div>
-            <h1>Send us your tooling requirement.</h1>
+            <h1>Send the drawing. We’ll review the tooling requirement.</h1>
+        </div>
+    </section>
+    <section class="section soft">
+        <div class="wrap formWrap">
+            <div>
+                <div class="eyebrow">WHAT HELPS US QUOTE</div>
+                <h2>Component + tool details.</h2>
+                <p class="lead">You can submit either a component drawing, a current tool drawing, or the technical
+                    details you already have.</p>
+                <div class="panel">
+                    <div class="featureList">
+                        <div class="feature"><span class="check">1</span>
+                            <div><b>Component / Tool Type</b><br>Gear, spline, sprocket / chain, ratchet, rack, ring
+                                gear or special profile.</div>
+                        </div>
+                        <div class="feature"><span class="check">2</span>
+                            <div><b>Technical Geometry</b><br>Module / DP / pitch, pressure angle, teeth / starts, RH/LH
+                                and topping requirement.</div>
+                        </div>
+                        <div class="feature"><span class="check">3</span>
+                            <div><b>Tool Construction</b><br>OD × length × bore, material grade, coating, start count
+                                and quantity.</div>
+                        </div>
+                        <div class="feature"><span class="check">4</span>
+                            <div><b>Upload Drawing</b><br>PDF, image, DWG/DXF, STEP/STP, IGES or ZIP.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="rfqForm" action="https://formspree.io/f/YOUR_FORMSPREE_FORM_ID" method="POST"
+                enctype="multipart/form-data">
+                <input type="hidden" name="_subject" value="New Website RFQ - Sree Sai Cutting Tools">
+                <div class="formGrid">
+                    <div class="field"><label>Your Name *</label><input name="name" required></div>
+                    <div class="field"><label>Company *</label><input name="company" required></div>
+                    <div class="field"><label>Email *</label><input type="email" name="email" required></div>
+                    <div class="field"><label>Phone</label><input name="phone"></div>
+                    <div class="field"><label>Tool / Component Type *</label><select name="tool_type" required>
+                            <option value="">Select</option>
+                            <option>Gear Hob</option>
+                            <option>Spline Cutter</option>
+                            <option>Sprocket / Chain Hob</option>
+                            <option>Ratchet Cutter</option>
+                            <option>Rack Milling Cutter</option>
+                            <option>Form Milling Cutter</option>
+                            <option>Starter Ring Gear Tooling</option>
+                            <option>Special Cutting Tool</option>
+                            <option>Other</option>
+                        </select></div>
+                    <div class="field"><label>Quantity</label><input name="quantity" placeholder="e.g. 2 pcs"></div>
+                    <div class="field"><label>Module / DP / Pitch</label><input name="module_dp_pitch"></div>
+                    <div class="field"><label>Pressure Angle</label><input name="pressure_angle"
+                            placeholder="e.g. 20° / 30°"></div>
+                    <div class="field"><label>RH / LH</label><input name="hand" placeholder="Right hand / Left hand">
+                    </div>
+                    <div class="field"><label>Teeth / Starts</label><input name="teeth_starts"></div>
+                    <div class="field"><label>Tool Size</label><input name="tool_size" placeholder="OD × Length × Bore">
+                    </div>
+                    <div class="field"><label>Material / Grade</label><input name="material_grade"
+                            placeholder="e.g. M2 / M35 / M42 / M50 / ASP30 / ASP2030"></div>
+                    <div class="field"><label>Coating</label><input name="coating" placeholder="If required"></div>
+                    <div class="field"><label>Target Delivery</label><input name="target_delivery"
+                            placeholder="Required date / lead time"></div>
+                    <div class="field full"><label>Drawing / Specification *</label><input type="file" name="attachment"
+                            required accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.jpg,.jpeg,.png,.zip"><span
+                            class="help">Upload limits depend on the form service plan you choose.</span></div>
+                    <div class="field full"><label>Application / Additional Details</label><textarea name="details"
+                            placeholder="Machine, workpiece material, current tool reference, production quantity, issues with current tool, etc."></textarea>
+                    </div>
+                    <div class="field full"><label><input type="checkbox" required style="width:auto;margin-right:8px">
+                            I confirm I am authorized to share the attached drawing/specification for quotation.</label>
+                    </div>
+                    <div class="field full">
+                        <div class="notice"><b>Setup required:</b> Replace <code>YOUR_FORMSPREE_FORM_ID</code> in this
+                            file after creating your Formspree form. Then submissions will be delivered to the email
+                            address configured in your Formspree account.</div>
+                    </div>
+                    <div class="field full"><button class="btn" type="submit">SUBMIT RFQ & DRAWING</button></div>
+                </div>
+            </form>
         </div>
     </section>
     <section class="section">
         <div class="wrap two">
             <div>
-                <h2>What to include</h2>
-                <p>Tool type, OD × length × bore, module / DP / pitch, pressure angle, hand (RH/LH), number of teeth /
-                    starts, topping requirement, material grade, coating, quantity and drawing/component reference. For
-                    gearbox or drivetrain applications, component drawings and current tool specifications are
-                    especially helpful.</p>
+                <h2>Prefer normal email?</h2>
+                <p class="lead">You can also email your RFQ and drawing directly to us.</p>
             </div>
-            <div class="contactbox">
-                <p>Email your specification or drawing to:</p>
-                <p><b>shreesaitools@gmail.com</b></p><a class="btn"
-                    href="mailto:shreesaitools@gmail.com?subject=Cutting Tool RFQ">EMAIL RFQ</a>
+            <div><a class="btn" href="mailto:shreesaitools@gmail.com?subject=Cutting Tool RFQ">EMAIL RFQ DIRECTLY</a>
             </div>
         </div>
     </section>
     <footer>
-        <div class="wrap">© 2026 Sree Sai Cutting Tools Pvt. Ltd. · Hyderabad, Telangana, India</div>
+        <div class="wrap">
+            <div class="footerBrand">Sree Sai Cutting Tools Pvt Ltd.</div>
+            <div class="copy">© 2026 Sree Sai Cutting Tools Pvt Ltd.</div>
+        </div>
     </footer>
+    <script src="site-data.js?v=8"></script>
+    <script src="app.js?v=8"></script>
 </body>
 
 </html>
