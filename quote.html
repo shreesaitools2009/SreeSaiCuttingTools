@@ -1,284 +1,190 @@
 <section class="rfq-section">
-  <div class="rfq-container">
+    <div class="rfq-container">
 
-    <div class="rfq-header">
-      <span class="rfq-kicker">REQUEST FOR QUOTATION</span>
-      <h1>Send Your RFQ & Drawing</h1>
-      <p>
-        Share your tooling requirement and drawing. Our team will review the
-        details and respond with quotation and delivery information.
-      </p>
-    </div>
-
-    <form
-      class="rfq-form"
-      action="https://formsubmit.co/shreesaitools@gmail.com"
-      method="POST"
-      enctype="multipart/form-data"
-    >
-
-      <input
-        type="hidden"
-        name="_subject"
-        value="New RFQ & Drawing - Sree Sai Cutting Tools Pvt Ltd."
-      >
-
-      <input
-        type="hidden"
-        name="_template"
-        value="table"
-      >
-
-      <input
-        type="hidden"
-        name="_captcha"
-        value="true"
-      >
-
-      <input
-        type="text"
-        name="_honey"
-        style="display:none"
-        tabindex="-1"
-        autocomplete="off"
-      >
-
-      <div class="rfq-card">
-        <div class="rfq-card-title">
-          <span>01</span>
-          <div>
-            <h2>Contact Information</h2>
-            <p>Tell us how we can reach you.</p>
-          </div>
-        </div>
-
-        <div class="rfq-grid">
-
-          <div class="field">
-            <label for="contactName">Contact Name <span>*</span></label>
-            <input
-              id="contactName"
-              type="text"
-              name="Contact Name"
-              placeholder="Your name"
-              required
-            >
-          </div>
-
-          <div class="field">
-            <label for="company">Company <span>*</span></label>
-            <input
-              id="company"
-              type="text"
-              name="Company"
-              placeholder="Company name"
-              required
-            >
-          </div>
-
-          <div class="field">
-            <label for="email">Email <span>*</span></label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="name@company.com"
-              required
-            >
-          </div>
-
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input
-              id="phone"
-              type="tel"
-              name="Phone"
-              placeholder="+1 555 123 4567"
-            >
-          </div>
-
-        </div>
-      </div>
-
-      <div class="rfq-card">
-        <div class="rfq-card-title">
-          <span>02</span>
-          <div>
-            <h2>Tool Requirement</h2>
-            <p>Provide the main technical details for your application.</p>
-          </div>
-        </div>
-
-        <div class="rfq-grid">
-
-          <div class="field">
-            <label for="toolType">Tool Type <span>*</span></label>
-            <select id="toolType" name="Tool Type" required>
-              <option value="">Select tool type</option>
-              <option>Gear Hob</option>
-              <option>Spline Hob</option>
-              <option>Spline Milling Cutter</option>
-              <option>Sprocket / Chain Hob</option>
-              <option>Ratchet Cutter</option>
-              <option>Rack Milling Cutter</option>
-              <option>Form Milling Cutter</option>
-              <option>Starter Ring Gear Tooling</option>
-              <option>Special Cutting Tool</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="quantity">Quantity</label>
-            <input
-              id="quantity"
-              type="number"
-              name="Quantity"
-              min="1"
-              placeholder="Example: 5"
-            >
-          </div>
-
-          <div class="field">
-            <label for="pitch">Module / DP / Pitch</label>
-            <input
-              id="pitch"
-              type="text"
-              name="Module / DP / Pitch"
-              placeholder="Example: 2.5 MOD"
-            >
-          </div>
-
-          <div class="field">
-            <label for="pressureAngle">Pressure Angle</label>
-            <input
-              id="pressureAngle"
-              type="text"
-              name="Pressure Angle"
-              placeholder="Example: 20°"
-            >
-          </div>
-
-          <div class="field">
-            <label for="starts">Number of Teeth / Starts</label>
-            <input
-              id="starts"
-              type="text"
-              name="Teeth / Starts"
-              placeholder="Example: 1 start / 43 teeth"
-            >
-          </div>
-
-          <div class="field">
-            <label for="hand">RH / LH</label>
-            <select id="hand" name="Hand">
-              <option value="">Select hand</option>
-              <option>RH</option>
-              <option>LH</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="toolSize">Tool Size</label>
-            <input
-              id="toolSize"
-              type="text"
-              name="Tool Size"
-              placeholder="OD × Length × Bore"
-            >
-          </div>
-
-          <div class="field">
-            <label for="material">Material Grade</label>
-            <input
-              id="material"
-              type="text"
-              name="Material Grade"
-              placeholder="M2 / M35 / M42 / M50 / ASP30"
-            >
-          </div>
-
-          <div class="field">
-            <label for="coating">Coating</label>
-            <input
-              id="coating"
-              type="text"
-              name="Coating"
-              placeholder="Example: Alcrona / GC Altra"
-            >
-          </div>
-
-          <div class="field">
-            <label for="delivery">Required Delivery</label>
-            <input
-              id="delivery"
-              type="text"
-              name="Required Delivery"
-              placeholder="Example: 4 weeks"
-            >
-          </div>
-
-        </div>
-      </div>
-
-      <div class="rfq-card">
-        <div class="rfq-card-title">
-          <span>03</span>
-          <div>
-            <h2>Drawing & Application</h2>
-            <p>Upload your drawing and add any additional information.</p>
-          </div>
-        </div>
-
-        <div class="field full-width">
-          <label for="details">Application / Additional Details</label>
-          <textarea
-            id="details"
-            name="Application / Additional Details"
-            rows="6"
-            placeholder="Tell us about the component, application, tolerance, coating requirement, machine, delivery expectation or any other relevant information."
-          ></textarea>
-        </div>
-
-        <div class="upload-box">
-          <div class="upload-icon">↑</div>
-
-          <div>
-            <label for="attachment" class="upload-title">
-              Upload Drawing / Specification <span>*</span>
-            </label>
-
+        <div class="rfq-header">
+            <span class="rfq-kicker">REQUEST FOR QUOTATION</span>
+            <h1>Send Your RFQ & Drawing</h1>
             <p>
-              PDF, DWG, DXF, STEP, STP, IGES, JPG, PNG or ZIP
+                Share your tooling requirement and drawing. Our team will review the
+                details and respond with quotation and delivery information.
             </p>
-
-            <input
-              id="attachment"
-              type="file"
-              name="attachment"
-              required
-              accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.jpg,.jpeg,.png,.zip"
-            >
-
-            <small>Maximum total attachment size: 10 MB.</small>
-          </div>
         </div>
-      </div>
 
-      <div class="rfq-notice">
-        <strong>Confidential RFQ submission</strong>
-        <p>
-          Your RFQ details and uploaded drawing will be sent to
-          Sree Sai Cutting Tools Pvt Ltd. for quotation review.
-        </p>
-      </div>
+        <form class="rfq-form" action="https://formsubmit.co/shreesaitools@gmail.com" method="POST"
+            enctype="multipart/form-data">
+            <input type="hidden" name="_url" value="http://sreesaicuttingtools.com/quote.html">
+            <input type="hidden" name="_subject" value="New RFQ & Drawing - Sree Sai Cutting Tools Pvt Ltd.">
 
-      <button type="submit" class="rfq-submit">
-        Submit RFQ & Drawing
-        <span>→</span>
-      </button>
+            <input type="hidden" name="_template" value="table">
 
-    </form>
+            <input type="hidden" name="_captcha" value="true">
 
-  </div>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="rfq-card">
+                <div class="rfq-card-title">
+                    <span>01</span>
+                    <div>
+                        <h2>Contact Information</h2>
+                        <p>Tell us how we can reach you.</p>
+                    </div>
+                </div>
+
+                <div class="rfq-grid">
+
+                    <div class="field">
+                        <label for="contactName">Contact Name <span>*</span></label>
+                        <input id="contactName" type="text" name="Contact Name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="company">Company <span>*</span></label>
+                        <input id="company" type="text" name="Company" placeholder="Company name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email <span>*</span></label>
+                        <input id="email" type="email" name="email" placeholder="name@company.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="tel" name="Phone" placeholder="+1 555 123 4567">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rfq-card">
+                <div class="rfq-card-title">
+                    <span>02</span>
+                    <div>
+                        <h2>Tool Requirement</h2>
+                        <p>Provide the main technical details for your application.</p>
+                    </div>
+                </div>
+
+                <div class="rfq-grid">
+
+                    <div class="field">
+                        <label for="toolType">Tool Type <span>*</span></label>
+                        <select id="toolType" name="Tool Type" required>
+                            <option value="">Select tool type</option>
+                            <option>Gear Hob</option>
+                            <option>Spline Hob</option>
+                            <option>Spline Milling Cutter</option>
+                            <option>Sprocket / Chain Hob</option>
+                            <option>Ratchet Cutter</option>
+                            <option>Rack Milling Cutter</option>
+                            <option>Form Milling Cutter</option>
+                            <option>Starter Ring Gear Tooling</option>
+                            <option>Special Cutting Tool</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="quantity">Quantity</label>
+                        <input id="quantity" type="number" name="Quantity" min="1" placeholder="Example: 5">
+                    </div>
+
+                    <div class="field">
+                        <label for="pitch">Module / DP / Pitch</label>
+                        <input id="pitch" type="text" name="Module / DP / Pitch" placeholder="Example: 2.5 MOD">
+                    </div>
+
+                    <div class="field">
+                        <label for="pressureAngle">Pressure Angle</label>
+                        <input id="pressureAngle" type="text" name="Pressure Angle" placeholder="Example: 20°">
+                    </div>
+
+                    <div class="field">
+                        <label for="starts">Number of Teeth / Starts</label>
+                        <input id="starts" type="text" name="Teeth / Starts" placeholder="Example: 1 start / 43 teeth">
+                    </div>
+
+                    <div class="field">
+                        <label for="hand">RH / LH</label>
+                        <select id="hand" name="Hand">
+                            <option value="">Select hand</option>
+                            <option>RH</option>
+                            <option>LH</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="toolSize">Tool Size</label>
+                        <input id="toolSize" type="text" name="Tool Size" placeholder="OD × Length × Bore">
+                    </div>
+
+                    <div class="field">
+                        <label for="material">Material Grade</label>
+                        <input id="material" type="text" name="Material Grade"
+                            placeholder="M2 / M35 / M42 / M50 / ASP30">
+                    </div>
+
+                    <div class="field">
+                        <label for="coating">Coating</label>
+                        <input id="coating" type="text" name="Coating" placeholder="Example: Alcrona / GC Altra">
+                    </div>
+
+                    <div class="field">
+                        <label for="delivery">Required Delivery</label>
+                        <input id="delivery" type="text" name="Required Delivery" placeholder="Example: 4 weeks">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rfq-card">
+                <div class="rfq-card-title">
+                    <span>03</span>
+                    <div>
+                        <h2>Drawing & Application</h2>
+                        <p>Upload your drawing and add any additional information.</p>
+                    </div>
+                </div>
+
+                <div class="field full-width">
+                    <label for="details">Application / Additional Details</label>
+                    <textarea id="details" name="Application / Additional Details" rows="6"
+                        placeholder="Tell us about the component, application, tolerance, coating requirement, machine, delivery expectation or any other relevant information."></textarea>
+                </div>
+
+                <div class="upload-box">
+                    <div class="upload-icon">↑</div>
+
+                    <div>
+                        <label for="attachment" class="upload-title">
+                            Upload Drawing / Specification <span>*</span>
+                        </label>
+
+                        <p>
+                            PDF, DWG, DXF, STEP, STP, IGES, JPG, PNG or ZIP
+                        </p>
+
+                        <input id="attachment" type="file" name="attachment" required
+                            accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.jpg,.jpeg,.png,.zip">
+
+                        <small>Maximum total attachment size: 10 MB.</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rfq-notice">
+                <strong>Confidential RFQ submission</strong>
+                <p>
+                    Your RFQ details and uploaded drawing will be sent to
+                    Sree Sai Cutting Tools Pvt Ltd. for quotation review.
+                </p>
+            </div>
+
+            <button type="submit" class="rfq-submit">
+                Submit RFQ & Drawing
+                <span>→</span>
+            </button>
+
+        </form>
+
+    </div>
 </section>
